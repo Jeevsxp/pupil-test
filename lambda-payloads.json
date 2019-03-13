@@ -1,0 +1,40 @@
+{
+    "notifier": {
+        "lambda": {
+            "bucket": "pupil-test",
+            "key": "test.txt"
+        },
+        "apigateway": {
+            "path": "/pupil/notify",
+            "method": {
+                "value": "POST",
+                "items": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "HEAD",
+                    "OPTIONS",
+                    "PATCH"
+                ]
+            },
+            "body": {
+                "key": "test.txt",
+                "bucket": "pupil-test"
+            }
+        }
+    },
+    "": {
+        "apigateway": {
+            "path": "",
+            "method": {
+                "value": "",
+                "items": []
+            },
+            "body": {
+                "bucket": "pupil-test",
+                "key": "test.txt"
+            }
+        }
+    }
+}
